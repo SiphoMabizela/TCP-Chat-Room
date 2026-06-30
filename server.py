@@ -40,7 +40,7 @@ def receive():
         client, address = server.accept()
         print(f"Connected with {str(address)}")
 
-        client.send('USER'. encode('ascii'))
+        client.send('USER'.encode('ascii'))
         username = client.recv(1024).decode('ascii')
         usernames.append(username)
         clients.append(client)
